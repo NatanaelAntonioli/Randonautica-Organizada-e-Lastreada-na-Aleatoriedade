@@ -1,3 +1,4 @@
+Atenção: se você é participante do estudo, baixe a [versão executável](https://github.com/NatanaelAntonioli/Randonautica-Organizada-e-Lastreada-na-Aleatoriedade/releases/tag/v1.0-exe) e leia atentamente o conteúdo das seções abaixo. A seção de perguntas frequentes é a única cuja leitura pode ser dispensada.
 ## O que é Randonautica Organizada e Lastreada na Aleatoriedade? ##
 
 [Randonautica](https://www.randonautica.com) é um aplicativo cuja proposta é levar o jogador a lugares inesperados nas redondezas através de coordenadas aleatórias geradas enquanto o usuário mentaliza um objetivo. As coordenadas são geradas através de um método quântico, e muitos apontam que o aplicativo possui alguma natureza subjacente, uma vez que as coordenadas indicadas muitas vezes carregam algum significado para o usuário. Assim, supõe-se que mentalizar um objetivo influencia na geração de números aleatórios quânticos. 
@@ -154,6 +155,10 @@ O arquivo encriptado contém apenas seu veredito, a natureza da coordenada e uma
 ### Quais informações são lidas pelo programa? ###
 
 Apenas a requisição feita na internet pelos números aleatórios, os valores inseridos, a data e hora do sistema e o arquivo `public_key.pem` presente no diretório do executável. 
+
+### Quais informações farão parte do estudo e serão publicadas? ###
+
+Todos os arquivos encriptados serão publicados, junto com a chave pública, logo todo o conteúdo de todos os arquivos encriptados será disponibilizado. Essas são as únicas informações que serão publicadas e que farão parte do estudo, a partir das quais as conclusões serão obtidas. 
 
 ### Quais os requisitos para rodar o código fonte do programa? ###
 
