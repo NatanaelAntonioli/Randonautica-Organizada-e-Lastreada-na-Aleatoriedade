@@ -7,7 +7,7 @@ Atenção: se você é participante do estudo, baixe a [versão executável](htt
 
 O programa é feito de forma que o usuário só descobre a verdadeira natureza do local que visitou após ter dado seu veredito a respeito dele. Assim, é possível checar se a fração de lugares que carregam algum significado para o usuário é ou não diferente entre coordenadas verdadeiramente aleatórias geradas durante a mentalização e coordenadas pseudoaleatórias geradas antes dela. Esse programa será usado no estudo a esse respeito conduzido pelo canal Fábrica de Noobs.
 
-## Como jogar?##
+## Como jogar? ##
 
 Para jogar, basta iniciar o programa através do arquivo executável. É fundamental que o arquivo de chave pública, `public_key.pem`, esteja na mesma pasta que o executável. É possível que haja alguma demora (cerca de 30 segundos a 1 minuto) para carregar o programa. Aguarde até que informações sejam exibidas na tela.
 
@@ -89,13 +89,13 @@ Se você optou por um jogo usual, que é a forma pretendia de se usar o programa
 ## O que mais preciso fazer participando do estudo? ##
 
 
-Os passos acima são válidos, até o veredito, também para quem participa do estudo. Porém, participantes do estudo não podem saber a verdadeira natureza da coordenada visitada até que sua participação no estudo esteja terminada. Essa é uma forma de garantir que a sua decisão de enviar ou não o resultado seja influenciada por ele (por exemplo, enviar apenas resultados que você julgou o local relevante) e que você não seja influenciado por resultados anteriores (por exemplo, deduzir que o próximo local deve ser pseudoaleatório porque os últimos 3 foram verdadeiramente aleatórios). 
+Os passos acima são válidos, até o veredito, também para quem participa do estudo. Porém, participantes do estudo não podem saber a verdadeira natureza da coordenada visitada até que sua participação no estudo esteja terminada. Essa é uma forma de garantir que a sua decisão de enviar ou não o resultado não seja influenciada por ele (por exemplo, enviar apenas resultados que você julgou o local relevante) e que você não seja influenciado por resultados anteriores (por exemplo, deduzir que o próximo local deve ser pseudoaleatório porque os últimos 3 foram verdadeiramente aleatórios). 
 
-Sendo assim, dar seu veredito produzirá um arquivo criptografado com [chave assimétrica](https://en.wikipedia.org/wiki/Public-key_cryptography) que contém as informações presentes no último bloco, ou seja, qual foi seu veredito e o que a coordenada visitada realmente era, além de uma sequência de 30 letras e números pseudoaleatórios que servem para tornar o processo de reverter a *hash* obtida mais difícil. **O arquivo não contém a localização visitada, a localização central, o raio, ou qualquer outra informação que permita lhe identificar**.
+Sendo assim, dar seu veredito produzirá um arquivo criptografado com [chave assimétrica](https://en.wikipedia.org/wiki/Public-key_cryptography) que contém as informações presentes no último bloco de código: qual foi seu veredito e o que a coordenada visitada realmente era, além de uma sequência de 30 letras e números pseudoaleatórios que serve para tornar o processo de reverter a *hash* obtida mais difícil. **O arquivo não contém a localização visitada, a localização central, o raio, ou qualquer outra informação que permita lhe identificar**.
 
 Além disso, você receberá uma *hash* em [*MD5*](https://en.wikipedia.org/wiki/MD5) da mensagem enviada, cujo uso abordaremos mais adiante.
 
-O arquivo será gerado com extensão *.encry* na pasta onde o executável e a chave pública estão, e ele possui um nome dependente unicamente do dia, mês, ano, hora, minuto e segundo de sua geração. Você deve enviá-lo, da forma que preferir (Discord, *e-mail*, Facebook, Twitter, *upload* na nuvem, etc.) para o Natanael.
+O arquivo será gerado com extensão *.encry* na pasta onde o executável e a chave pública estão, e ele possui um nome dependente unicamente do dia, mês, ano, hora, minuto e segundo de sua geração. Você deve enviá-lo, da forma que preferir (Discord, *e-mail*, Facebook, Twitter, *upload* na nuvem, etc.), para o Natanael.
 
 	----------------------------------------- Resultados -----------------------------------------
 	Como informado, você só poderá descobrir a natureza do local  ao final do estudo quando a chave 
@@ -111,9 +111,9 @@ O arquivo será gerado com extensão *.encry* na pasta onde o executável e a ch
 
 ![](https://i.imgur.com/y0aeM7C.png)
 
-Uma vez enviado os arquivos, comunique o Natanael quando deseja encerrar sua participação no estudo. Ao encerrar sua participação na série do estudo, arquivos enviados não serão mais considerados a menos que um novo estudo seja iniciado.
+Uma vez enviado os arquivos, comunique o Natanael quando deseja encerrar sua participação no estudo. Ao encerrar sua participação na série do estudo, arquivos que você enviar posteriormente não serão mais considerados a menos que um novo estudo seja iniciado. 
 
-Quando você encerrar sua participação, o Natanael irá lhe enviar um relatório com a tradução de cada arquivo que você enviou, ao lado da *hash* calculada que você pode utilizar para conferência da integridade da tradução comparando-a com a hash que recebeu ao gerar o arquivo.
+Quando você encerrar sua participação, o Natanael irá lhe devolver um relatório com a tradução de cada arquivo que você enviou, ao lado da *hash* calculada que você pode utilizar para conferência da integridade da tradução comparando-a com a hash que recebeu ao gerar o arquivo.
 
 	--------------------------------------------------130821183313.encry--------------------------------------------------
 	HASH: d77577ae84aa6f4068ac5c0cd4582f84
