@@ -95,7 +95,7 @@ Sendo assim, dar seu veredito produzirá um arquivo criptografado com [chave ass
 
 Além disso, você receberá uma *hash* em [*MD5*](https://en.wikipedia.org/wiki/MD5) da mensagem enviada, cujo uso abordaremos mais adiante.
 
-O arquivo será gerado com extensão *.encry* na pasta onde o executável e a chave pública estão, e ele possui um nome dependente unicamente do dia, mês, ano, hora, minuto e segundo de sua geração. Você deve enviá-lo, da forma que preferir (Discord, *e-mail*, Facebook, Twitter, *upload* na nuvem, etc.), para o Natanael.
+O arquivo será gerado com extensão *.encry* na pasta onde o executável e a chave pública estão, e ele possui um nome dependente unicamente do dia, mês, ano, hora, minuto e segundo de sua geração. Você deve enviá-lo, da forma que preferir (Discord, *e-mail*, Facebook, Twitter, *upload* na nuvem, etc.), para o Natanael. Não é necessário incluir qualquer outra informação, já que o arquivo contém todas as informações necessárias.
 
 	----------------------------------------- Resultados -----------------------------------------
 	Como informado, você só poderá descobrir a natureza do local  ao final do estudo quando a chave 
@@ -113,7 +113,7 @@ O arquivo será gerado com extensão *.encry* na pasta onde o executável e a ch
 
 Uma vez enviado os arquivos, comunique o Natanael quando deseja encerrar sua participação no estudo. Ao encerrar sua participação na série do estudo, arquivos que você enviar posteriormente não serão mais considerados a menos que um novo estudo seja iniciado. 
 
-Quando você encerrar sua participação, o Natanael irá lhe devolver um relatório com a tradução de cada arquivo que você enviou, ao lado da *hash* calculada que você pode utilizar para conferência da integridade da tradução comparando-a com a hash que recebeu ao gerar o arquivo.
+Quando você encerrar sua participação, o Natanael irá lhe devolver um relatório com a tradução de cada arquivo que você enviou, ao lado da *hash* calculada. Se você fez alguma jogada cujo resultado gostaria de conhecer, anote a hash devolvida, assim você pode localizá-la no relatório. A hash também permite que você confira a integridade da mensagem contida no arquivo.
 
 	--------------------------------------------------130821183313.encry--------------------------------------------------
 	HASH: d77577ae84aa6f4068ac5c0cd4582f84
@@ -180,7 +180,7 @@ Python 3, além das bibliotecas presentes no cabeçalho.
 	from cryptography.hazmat.primitives.asymmetric import padding
 	import hashlib
 
-###Como posso auditar o programa?###
+### Como posso auditar o programa? ###
 
 O programa é de código aberto, então um bom começo é a análise do código fonte presente neste repositório. Você também pode usar o modo de jogo *administrador* para verificar todas as coordenadas geradas.
 
@@ -209,7 +209,7 @@ A geração de números pseudoaleatórios entre 0 e 1 é feita com a biblioteca 
 
 Já a geração de números verdadeiramente aleatórios entre 0 e 1 e feita fazendo-se uma requisição de 1000 números entre 0 e 65535 para a [API](https://qrng.anu.edu.au/contact/api-documentation/) do gerador de números aleatórios quânticos da *Australian National University*. O valor recebido é então dividido por 65535. Uma nova requisição é feita toda vez que os 1000 números obtidos se esgotam, e isso ocorre a cada 500 coordenadas.  
 
-###Como cada coordenada é gerada?###
+### Como cada coordenada é gerada? ###
 
 As coordenadas de controle são geradas quando a coordenada central é informada, de maneira sequencial, com coordenadas pseudoaleatórias. A coordenada de ponto cego é gerada produzindo-se uma única coordenada verdadeiramente aleatória.
 
