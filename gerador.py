@@ -45,7 +45,7 @@ def menu_principal_func():
         menu_principal = str(input("Insira um valor válido: "))
 
     if menu_principal == "4":
-        !kill -9 -1
+        quit()
     else:
         return int(menu_principal)
 
@@ -64,7 +64,7 @@ def menu_tipo_local_func():
         menu_tipo_local = str(input("Insira um valor válido: "))
 
     if menu_tipo_local == "5":
-        !kill -9 -1
+        quit()
     else:
         return int(menu_tipo_local)
 
@@ -254,7 +254,7 @@ while MENU_tipo_local != 5:
 
         if Prosseguir == "2":
             MENU_tipo_local = 5
-            !kill -9 -1
+            quit()
 
     else:
         MENU_tipo_local = menu_tipo_local_func()
