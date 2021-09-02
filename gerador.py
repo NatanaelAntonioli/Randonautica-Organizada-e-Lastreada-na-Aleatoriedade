@@ -485,11 +485,11 @@ while MENU_tipo_local != 5:
             if veredito == 1:
                 veredito_resultado = "Visita presencial. Foi relevante."
             elif veredito == 2:
-                veredito_resultado = "Visita presencial. Não foi relevante."
+                veredito_resultado = "Visita presencial. Nao foi relevante."
             elif veredito == 3:
                 veredito_resultado = "Visita virtual. Foi relevante."
             elif veredito == 4:
-                veredito_resultado = "Visita virtual. Não foi relevante."
+                veredito_resultado = "Visita virtual. Nao foi relevante."
             else:
                 veredito_resultado = "CALL THE COPS! Tem algo errado com o programa. Serio." + str(veredito)
 
