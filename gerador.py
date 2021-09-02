@@ -1,4 +1,5 @@
 import random
+from random import randrange
 from datetime import datetime
 
 import numpy as np
@@ -424,27 +425,27 @@ while MENU_tipo_local != 5:
         if MENU_tipo_geracao == 2:
             visitar = coordenada_pseudo_controle
             if MENU_tipo_local == 1:
-                visitar_tipo = "Voce apenas visitou uma coordenada desatrelada com o que mentalizou (ponto cego)."
+                visitar_tipo = "Coordenada desatrelada (ponto cego)."
             elif MENU_tipo_local == 2:
-                visitar_tipo = "Voce apenas visitou uma coordenada desatrelada com o que mentalizou (atrator)."
+                visitar_tipo = "Coordenada desatrelada (atrator)."
             elif MENU_tipo_local == 3:
-                visitar_tipo = "Voce apenas visitou uma coordenada desatrelada com o que mentalizou (vazio)."
+                visitar_tipo = "Coordenada desatrelada  (vazio)."
             elif MENU_tipo_local == 4:
-                visitar_tipo = "Voce apenas visitou uma coordenada desatrelada com o que mentalizou (" + tipo_anomalia + ")."
+                visitar_tipo = "Coordenada desatrelada  (anomalia - " + tipo_anomalia + ")."
 
         else:
             if MENU_tipo_local == 1:
                 visitar = coordenada_ponto_cego
-                visitar_tipo = "Voce visitou uma coordenada atrelada com o que mentalizou (ponto cego)."
+                visitar_tipo = "Coordenada atrelada (ponto cego)."
             elif MENU_tipo_local == 2:
                 visitar = coordenada_atrator
-                visitar_tipo = "Voce visitou uma coordenada atrelada com o que mentalizou (atrator)."
+                visitar_tipo = "Coordenada atrelada (atrator)."
             elif MENU_tipo_local == 3:
                 visitar = coordenada_vazio
-                visitar_tipo = "Voce visitou uma coordenada atrelada com o que mentalizou (vazio)."
+                visitar_tipo = "Coordenada atrelada (vazio)."
             elif MENU_tipo_local == 4:
                 visitar = coordenada_anomalia
-                visitar_tipo = "Voce visitou uma coordenada atrelada com o que mentalizou (anomalia " + tipo_anomalia + ")."
+                visitar_tipo = "Coordenada atrelada (anomalia - " + tipo_anomalia + ")."
 
         print("")
         if MENU_tipo_local == 1:
@@ -482,13 +483,13 @@ while MENU_tipo_local != 5:
             veredito = int(veredito)
 
             if veredito == 1:
-                veredito_resultado = "Voce visitou o local pessoalmente e ele foi relevante para voce."
+                veredito_resultado = "Visita presencial. Foi relevante."
             elif veredito == 2:
-                veredito_resultado = "Voce visitou o local pessoalmente e ele nao significou nada para voce."
+                veredito_resultado = "Visita presencial. Não foi relevante."
             elif veredito == 3:
-                veredito_resultado = "Voce visitou o local pelo Street View e ele foi relevante para voce."
+                veredito_resultado = "Visita virtual. Foi relevante."
             elif veredito == 4:
-                veredito_resultado = "Voce visitou o local pelo Street View e ele nao significou nada para voce."
+                veredito_resultado = "Visita virtual. Não foi relevante."
             else:
                 veredito_resultado = "CALL THE COPS! Tem algo errado com o programa. Serio." + str(veredito)
 
@@ -498,7 +499,7 @@ while MENU_tipo_local != 5:
                 print(visitar_tipo)
             if MENU_principal == 2:
                 mensagem_plain = veredito_resultado + " " + visitar_tipo + " SALT: " + ''.join(
-                    random.choice(string.ascii_uppercase + string.digits) for _ in range(30))
+                    random.choice(string.ascii_uppercase + string.digits) for _ in range(30 - randrange(10)))
                 mensagem_plain = bytes(mensagem_plain, 'ascii')
 
                 # Faz a mensagem criptografada
