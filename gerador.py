@@ -45,7 +45,7 @@ def menu_principal_func():
         menu_principal = str(input("Insira um valor válido: "))
 
     if menu_principal == "4":
-        quit()
+        !kill -9 -1
     else:
         return int(menu_principal)
 
@@ -64,7 +64,7 @@ def menu_tipo_local_func():
         menu_tipo_local = str(input("Insira um valor válido: "))
 
     if menu_tipo_local == "5":
-        quit()
+        !kill -9 -1
     else:
         return int(menu_tipo_local)
 
@@ -254,7 +254,7 @@ while MENU_tipo_local != 5:
 
         if Prosseguir == "2":
             MENU_tipo_local = 5
-            quit()
+            !kill -9 -1
 
     else:
         MENU_tipo_local = menu_tipo_local_func()
@@ -337,7 +337,7 @@ while MENU_tipo_local != 5:
 
         # 3) Gerar o atrator
 
-        tree_atrator = spatial.KDTree(np.array(list_random))
+        tree_atrator = spatial.KDTree(np.array(list_random).astype(np.float))
         neighbors_atrator = tree_atrator.query_ball_tree(tree_atrator, raio_busca_atrator)
         frequency_atrator = np.array(list(map(len, neighbors_atrator)))
         mean_atrator = np.mean(frequency_atrator)
@@ -363,7 +363,7 @@ while MENU_tipo_local != 5:
 
         # 4) Gerar o vazio
 
-        tree_vazio = spatial.KDTree(np.array(list_random))
+        tree_vazio = spatial.KDTree(np.array(list_random).astype(np.float))
         neighbors_vazio = tree_vazio.query_ball_tree(tree_vazio, raio_busca_vazio)
         frequency_vazio = np.array(list(map(len, neighbors_vazio)))
         mean_vazio = np.mean(frequency_vazio)
@@ -472,17 +472,23 @@ while MENU_tipo_local != 5:
         if visitou == 1:
             print("------------------------------------------ Veredito ------------------------------------------")
             print("O que você achou do local visitado?")
-            print("1 - De alguma forma, o local foi relevante para mim.")
-            print("2 - O local não  significou nada para mim.")
+            print("1 - Visitei o local pessoalmente e, de alguma forma, o local foi relevante para mim.")
+            print("2 - Visitei o local pessoalmente e o local não  significou nada para mim.")
+            print("3 - Visitei o local pelo Street View e, de alguma forma, o local foi relevante para mim.")
+            print("4 - Visitei o local pelo Street View e o local não  significou nada para mim.")
             veredito = str(input("Informe seu veredito: "))
-            while veredito != "1" and veredito != "2":
+            while veredito != "1" and veredito != "2" and veredito != "3" and veredito != "4":
                 veredito = str(input("Insira um valor válido: "))
             veredito = int(veredito)
 
             if veredito == 1:
-                veredito_resultado = "Voce disse que o local foi relevante para voce."
+                veredito_resultado = "Voce visitou o local pessoalmente e ele foi relevante para voce."
             elif veredito == 2:
-                veredito_resultado = "Voce disse que o local nao significou nada para voce."
+                veredito_resultado = "Voce visitou o local pessoalmente e ele nao significou nada para voce."
+            elif veredito == 3:
+                veredito_resultado = "Voce visitou o local pelo Street View e ele foi relevante para voce."
+            elif veredito == 4:
+                veredito_resultado = "Voce visitou o local pelo Street View e ele nao significou nada para voce."
             else:
                 veredito_resultado = "CALL THE COPS! Tem algo errado com o programa. Serio." + str(veredito)
 
@@ -508,7 +514,7 @@ while MENU_tipo_local != 5:
                 # Escreve num arquivo identificado
                 ind = datetime.now()
                 ind = ind.strftime("%d%m%y%H%M%S")
-                f = open(str(ind) + '.encry', 'wb')
+                f = open('results/' + str(ind) + '.encry', 'wb')
                 f.write(encrypted)
                 f.close()
 
