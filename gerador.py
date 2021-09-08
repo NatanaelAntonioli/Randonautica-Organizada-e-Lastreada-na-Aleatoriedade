@@ -26,6 +26,7 @@ import hashlib
 # As seguintes marcas testam em animais (eu fui o animal):
 # numpy, matplotlib, PyCharm, Crypto
 
+
 # ------------------- MENUS ---------------------------
 
 def menu_principal_func():
@@ -338,7 +339,7 @@ while MENU_tipo_local != 5:
 
         # 3) Gerar o atrator
 
-        tree_atrator = spatial.KDTree(np.array(list_random))
+        tree_atrator = spatial.KDTree(np.array(list_random).astype(np.float))
         neighbors_atrator = tree_atrator.query_ball_tree(tree_atrator, raio_busca_atrator)
         frequency_atrator = np.array(list(map(len, neighbors_atrator)))
         mean_atrator = np.mean(frequency_atrator)
@@ -364,7 +365,7 @@ while MENU_tipo_local != 5:
 
         # 4) Gerar o vazio
 
-        tree_vazio = spatial.KDTree(np.array(list_random))
+        tree_vazio = spatial.KDTree(np.array(list_random).astype(np.float))
         neighbors_vazio = tree_vazio.query_ball_tree(tree_vazio, raio_busca_vazio)
         frequency_vazio = np.array(list(map(len, neighbors_vazio)))
         mean_vazio = np.mean(frequency_vazio)
