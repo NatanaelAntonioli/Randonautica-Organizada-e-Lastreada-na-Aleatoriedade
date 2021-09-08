@@ -527,7 +527,7 @@ while MENU_tipo_local != 5:
                 print("tais como coordenadas ou dados do dispositivo, mas apenas o tipo de local (ponto cego, atrator,")
                 print("vazio, anomalia), o tipo de visita, seu veredito, e a natureza do local.")
                 print("")
-                print("Guarde a hash MD5 abaixo caso quiser conferir a integridade da mensagem enviada quando esta for decifrada")
+                print("Guarde a hash MD5 abaixo caso quiser conferir a integridade da mensagem enviada quando esta for decifrada.")
                 print("A hash não deve ser enviada para o Natanael. Apenas o arquivo compactado gerado ao final, que contém")
                 print("tudo que ele precisa saber.")
                 print("")
