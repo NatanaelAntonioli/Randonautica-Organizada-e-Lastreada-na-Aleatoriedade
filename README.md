@@ -223,7 +223,6 @@ Então, geramos um número grande de coordenadas verdadeiramente aleatórias e a
 Esses números são a base para a geração de coordenadas geográficas através de um sistema de coordenadas polares, que garante que todo ponto dentro da região tenha igual chance de ser selecionado.
 
 Finalmente, computamos o número de vizinhos de cada ponto usando uma [árvore k-d](https://pt.wikipedia.org/wiki/%C3%81rvore_k-d). Calculamos então o ponto com mais e menos vizinhos em um raio de 111 metros, que satisfaça a condição de distar do centro menos que o raio informado. Assim, se o ponto com mais (ou menos) vizinhos estiver na região cinza, ele é descartado. Isso é especialmente útil para evitar que um ponto com menos vizinhos seja escolhido na borda, onde  trivialmente não há pontos em parte da região.
-c
 
 ### Porque você não usou orientação a objetos? ###
 
